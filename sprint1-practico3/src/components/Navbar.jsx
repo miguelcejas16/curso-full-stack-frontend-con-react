@@ -6,9 +6,9 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar el menú
   const navItems = ["Inicio", "Servicios", "Acerca de", "Contacto"];
   const socialLinks = [
-    { name: "Instagram", url: "#", icon: "bi-instagram" },
-    { name: "Facebook", url: "#", icon: "bi-facebook" },
-    { name: "Twitter", url: "#", icon: "bi-twitter-x" },
+    { name: "Instagram", url: "https://www.instagram.com", icon: "bi-instagram" },
+    { name: "Facebook", url: "https://www.facebook.com", icon: "bi-facebook" },
+    { name: "Twitter", url: "https://www.x.com", icon: "bi-twitter-x" },
   ];
 
   return (
@@ -39,7 +39,7 @@ function Navbar() {
           {navItems.map((item, index) => (
             <motion.a
               key={index}
-              href="#"
+              href="/"
               className="hover:text-blue-300 transition-colors overlock-bold py-2 md:py-0"
               whileHover={{ scale: 1.2 }}
             >
@@ -55,7 +55,7 @@ function Navbar() {
           {socialLinks.map((social, index) => (
             <motion.a
               key={index}
-              href={social.url}
+              link={social.url}
               className="hover:text-blue-300 transition-colors text-2xl"
               whileHover={{ scale: 1.2 }}
               aria-label={social.name}
