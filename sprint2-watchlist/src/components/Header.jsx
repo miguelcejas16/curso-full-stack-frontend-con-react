@@ -1,6 +1,6 @@
 import logo from '../assets/m-logo.png'
 
-const Header = ({ onOpenModal }) => {
+const Header = ({ onOpenModal, watchlist }) => {
     return (
       <header className="bg-gradient-to-r from-blue-800 to-indigo-900 text-white p-4 flex justify-between items-center rounded-md ">
         <a href="/">
@@ -14,6 +14,12 @@ const Header = ({ onOpenModal }) => {
           className="bg-gradient-to-r from-fuchsia-600 to-purple-600 px-4 py-2 rounded hover:bg-blue-100 font-[Bebas-Neue]"
         >
           Ver mi lista
+        </button>
+        <button onClick={() => {
+          return watchlist.length ? console.log("The Matrix") : console.log("No hay peliculas para recomendar");
+          }
+        }>
+          Recomendaciones
         </button>
       </header>
     );

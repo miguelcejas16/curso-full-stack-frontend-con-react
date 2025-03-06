@@ -51,7 +51,7 @@ const movies = [
 
   return (
     <div className="p-4">
-      <Header onOpenModal={handleOpenModal} />
+      <Header onOpenModal={handleOpenModal} watchlist={watchlist} />
       <MovieList movies={movies} onAdd={addToWatchlist} />
       {isModalOpen && (
         <WatchlistModal
